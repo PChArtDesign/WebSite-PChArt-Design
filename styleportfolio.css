@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Stay-Wanderer';
+    src:url('Ressources/stay-wanderer-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src:url('Ressources/static/LeagueSpartan-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glaciale Indifference';
+    src:url('Ressources/GlacialIndifference-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jonathan';
+    src:url('Ressources/Jonathan\ Hetegral.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Autres styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+/* Styles pour l'image de fond */
+.background-image {
+    background-image: url('Images/Fond-2.png'); /* Chemin vers votre image */
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    width: 100%;
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Couleur du texte pour contraster avec l'image de fond */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Nécessaire pour positionner le cercle bleu */
+}
+
+/* Styles pour le cercle bleu */
+.blue-circle {
+    width: 375px; /* Diamètre du cercle */
+    height: 375px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    border: 8px solid rgb(0, 237, 255); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    top: -110px; /* Distance du haut de la page */
+    left: -100px; /* Distance de la gauche de la page */
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+/* Styles pour le cercle rose */
+.pink-circle {
+    width: 325px; /* Diamètre du cercle */
+    height: 325px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    border: 8px solid rgb(248, 40, 118); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    top: -80px; /* Distance du haut de la page */
+    left: -75px; /* Distance de la gauche de la page */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+/* Styles pour le texte circulaire */
+.circle-text {
+    position: absolute;
+    top: 210px; /* Distance du haut de la page */
+    left: -72.5px; /* Distance de la gauche de la page */
+    width: 325px;
+    height: 325px;
+    font-size: 2em;
+    /*border: 8px solid rgb(248, 40, 118); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    font-family: 'Stay-Wanderer', sans-serif;
+    z-index: 1; 
+}
+
+.circle-text span {
+    position: absolute;
+    /*transform-origin: 350px 350px;
+    font-size: 40px; /* Ajustez la taille du texte selon vos besoins */
+    color: white; /* Couleur du texte */
+}
+
+.circle-text span:nth-child(1) { transform: rotate(195deg) translate(85px) rotate(-166deg); }
+.circle-text span:nth-child(2) { transform: rotate(192deg) translate(70px) rotate(-163deg); }
+.circle-text span:nth-child(3) { transform: rotate(189deg) translate(55px) rotate(-160deg); }
+
+.circle-text span:nth-child(4) { transform: rotate(186deg) translate(40px) rotate(-157deg); }
+
+.circle-text span:nth-child(5) { transform: rotate(183deg) translate(25px) rotate(-180deg); }
+.circle-text span:nth-child(6) { transform: rotate(180deg) translate(10px) rotate(-180deg); }
+.circle-text span:nth-child(7) { transform: rotate(177deg) translate(-5px) rotate(-180deg); }
+
+.circle-text span:nth-child(8) { transform: rotate(174deg) translate(-20px) rotate(-180deg); }
+
+.circle-text span:nth-child(9) { transform: rotate(171deg) translate(-35px) rotate(-180deg); }
+.circle-text span:nth-child(10) { transform: rotate(168deg) translate(-57px) rotate(-185deg); }
+.circle-text span:nth-child(11) { transform: rotate(165deg) translate(-73px) rotate(-190deg); }
+.circle-text span:nth-child(12) { transform: rotate(162deg) translate(-90px) rotate(-195deg); }
+.circle-text span:nth-child(13) { transform: rotate(159deg) translate(-110px) rotate(-196deg); }
+.circle-text span:nth-child(14) { transform: rotate(156deg) translate(-125px) rotate(-200deg); }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Change background to black */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure that overflow is hidden for animations */
+}
+
+#image-logo {
+    position: absolute;
+    top: 4.3%; /* Démarre hors de l'écran en bas */
+    left: -1%; /* Centre horizontalement */
+    /*transform: translateX(-50%) rotate(30deg); /* Rotation de 30 degrés et centrage */
+    transform: rotate(-12deg); /* Rotation de 45 degrés */
+    width: 20%; /* Largeur suffisamment grande pour couvrir l'écran */
+    /*transition: top 1s ease; /* Animation de 1 seconde avec effet de transition */
+    z-index: 1; /* Place le contenu derrière les autres éléments */
+}
+
+.boutons0 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 1%; /* Démarre hors de l'écran en bas */
+    left:15%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(0, 237, 255);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+
+.boutons1 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 9.5%; /* Démarre hors de l'écran en bas */
+    left: 16%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+.boutons2 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 18%; /* Démarre hors de l'écran en bas */
+    left: 14.5%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+.boutons3 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 26.5%; /* Démarre hors de l'écran en bas */
+    left: 11%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+button:hover {
+    transform: scale(1.1); /* Agrandit légèrement le bouton */
+}
