@@ -229,6 +229,7 @@ button:hover {
 
 .animated-container2 {
     position: relative; /* Position relative pour utiliser translateX correctement */
+    nav-index: 0 ;
     animation: slideFromLeft 0.5s ease-in; /* Appliquer l'animation */
     animation-fill-mode: both; /* Laisser l'élément à sa position finale après l'animation */
     top: 40%; /* Démarre hors de l'écran en bas */
@@ -246,7 +247,9 @@ button:hover {
 
 .animated-container3 {
     position: relative; /* Position relative pour utiliser translateX correctement */
+    nav-index: 1;
     animation: slideFromLeft 0.8s ease-in; /* Appliquer l'animation */
+    animation-delay: 0.5s; /* Délai de 0.5 seconde */
     animation-fill-mode: both; /* Laisser l'élément à sa position finale après l'animation */
     top: 21%; /* Démarre hors de l'écran en bas */
     left: -34%; /* Centre horizontalement */
@@ -262,7 +265,8 @@ button:hover {
 }
 .animated-container4 {
     position: relative; /* Position relative pour utiliser translateX correctement */
-    animation: slideFromLeft 1s ease-in; /* Appliquer l'animation */
+    animation: slideFromLeft 0.8s ease-in; /* Appliquer l'animation */
+    animation-delay: 1s; /* Délai de 0.5 seconde */
     animation-fill-mode: both; /* Laisser l'élément à sa position finale après l'animation */
     top: 4%; /* Démarre hors de l'écran en bas */
     left: -29.5%; /* Centre horizontalement */
@@ -277,10 +281,23 @@ button:hover {
     overflow: hidden; /* Ensure that overflow is hidden for animations */
 }
 
-.container5 {
+/* Définition de l'animation de gauche à droite */
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(-200%); /* Début de l'animation à gauche */
+    }
+    100% {
+        transform: translateY(0); /* Fin de l'animation à droite */
+    }
+}
+
+.animated-container5 {
     position: absolute;
     top: 8%; /* Démarre hors de l'écran en bas */
     left: 55%; /* Centre horizontalement */
+    animation: slideFromBottom 1.2s ease-in; /* Appliquer l'animation */
+    animation-delay: 1.5s; /* Délai de 0.5 seconde */
+    animation-fill-mode: both; /* Laisser l'élément à sa position finale après l'animation */
     font-size: 0.75em;
     font-family: 'Glaciale Indifference';
     width: 22%;
@@ -308,7 +325,7 @@ button:hover {
     width: 325px; /* Diamètre du cercle */
     height: 325px; /* Diamètre du cercle */
     background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Reflet.jpg');
+    background-image: url('Images/Moi.png');
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
