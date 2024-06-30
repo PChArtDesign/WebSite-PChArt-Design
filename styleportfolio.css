@@ -52,6 +52,83 @@ body, html {
     position: relative; /* Nécessaire pour positionner le cercle bleu */
 }
 
+/* Animation pour le premier texte */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }  
+    5% {
+        opacity: 1;
+    }
+    17.5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Styles pour le conteneur */
+.text-container {
+    position: relative;
+    top: 0; /* Distance du haut de la page */
+    left: 28%; /* Distance de la gauche de la page */
+    width: 100%;
+    height: 100%;
+}
+/* Styles pour les textes */
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    position: absolute;
+    top: 40%; /* Distance du haut de la page */
+    left: -150px; /* Distance de la gauche de la page */
+    width: 350px;
+    font-family: 'Glaciale Indifference';
+    color: white; /* Couleur du texte pour contraster avec l'image de fond */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+/* Appliquer les animations */
+.text1 {
+    animation: fadeIn 40s linear infinite;
+}
+.text2 {
+    animation: fadeIn 40s linear infinite;
+    animation-delay: 8s; /* Délai pour synchroniser avec le premier texte */
+}
+.text3 {
+    animation: fadeIn 40s linear infinite;
+    animation-delay: 16s; /* Délai pour synchroniser avec le premier texte */
+}
+.text4 {
+    animation: fadeIn 40s linear infinite;
+    animation-delay: 24s; /* Délai pour synchroniser avec le premier texte */
+}
+.text5 {
+    animation: fadeIn 40s linear infinite;
+    animation-delay: 32s; /* Délai pour synchroniser avec le premier texte */
+}
+.text6 {
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 0%; /* Démarre hors de l'écran en bas */
+    left: 150px; /* Centre horizontalement */
+    font-size: 2.2em;
+    width: 150px;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
 /* Styles pour le cercle bleu */
 .blue-circle {
     width: 375px; /* Diamètre du cercle */
@@ -99,24 +176,20 @@ body, html {
     color: white; /* Couleur du texte */
 }
 
-.circle-text span:nth-child(1) { transform: rotate(195deg) translate(85px) rotate(-166deg); }
-.circle-text span:nth-child(2) { transform: rotate(192deg) translate(70px) rotate(-163deg); }
-.circle-text span:nth-child(3) { transform: rotate(189deg) translate(55px) rotate(-160deg); }
-
-.circle-text span:nth-child(4) { transform: rotate(186deg) translate(40px) rotate(-157deg); }
-
-.circle-text span:nth-child(5) { transform: rotate(183deg) translate(25px) rotate(-180deg); }
-.circle-text span:nth-child(6) { transform: rotate(180deg) translate(10px) rotate(-180deg); }
-.circle-text span:nth-child(7) { transform: rotate(177deg) translate(-5px) rotate(-180deg); }
-
-.circle-text span:nth-child(8) { transform: rotate(174deg) translate(-20px) rotate(-180deg); }
-
-.circle-text span:nth-child(9) { transform: rotate(171deg) translate(-35px) rotate(-180deg); }
-.circle-text span:nth-child(10) { transform: rotate(168deg) translate(-57px) rotate(-185deg); }
-.circle-text span:nth-child(11) { transform: rotate(165deg) translate(-73px) rotate(-190deg); }
-.circle-text span:nth-child(12) { transform: rotate(162deg) translate(-90px) rotate(-195deg); }
-.circle-text span:nth-child(13) { transform: rotate(159deg) translate(-110px) rotate(-196deg); }
-.circle-text span:nth-child(14) { transform: rotate(156deg) translate(-125px) rotate(-200deg); }
+.circle-text span:nth-child(1) { transform: rotate(195deg) translate(85px) rotate(-166deg); }/*A*/
+.circle-text span:nth-child(2) { transform: rotate(192deg) translate(70px) rotate(-163deg); }/*r*/
+.circle-text span:nth-child(3) { transform: rotate(189deg) translate(55px) rotate(-160deg); }/*t*/
+.circle-text span:nth-child(4) { transform: rotate(186deg) translate(40px) rotate(-157deg); }/*_*/
+.circle-text span:nth-child(5) { transform: rotate(183deg) translate(25px) rotate(-180deg); }/*s*/
+.circle-text span:nth-child(6) { transform: rotate(180deg) translate(10px) rotate(-180deg); }/*u*/
+.circle-text span:nth-child(7) { transform: rotate(177deg) translate(-5px) rotate(-180deg); }/*r*/
+.circle-text span:nth-child(8) { transform: rotate(174deg) translate(-20px) rotate(-180deg); }/*_*/
+.circle-text span:nth-child(9) { transform: rotate(171deg) translate(-35px) rotate(-180deg); }/*M*/
+.circle-text span:nth-child(10) { transform: rotate(168deg) translate(-57px) rotate(-185deg); }/*e*/
+.circle-text span:nth-child(11) { transform: rotate(165deg) translate(-73px) rotate(-190deg); }/*s*/
+.circle-text span:nth-child(12) { transform: rotate(162deg) translate(-90px) rotate(-195deg); }/*u*/
+.circle-text span:nth-child(13) { transform: rotate(159deg) translate(-110px) rotate(-196deg); }/*r*/
+.circle-text span:nth-child(14) { transform: rotate(156deg) translate(-125px) rotate(-200deg); }/*e*/
 
 .container {
     position: relative;
@@ -216,6 +289,106 @@ body, html {
 button:hover {
     transform: scale(1.1); /* Agrandit légèrement le bouton */
 }
+
+.text12 button,
+.text11 button,
+.text10 button,
+.text9 button,
+.text8 button,
+.text7 button{
+    font-size: 3.6em;
+    width: 550px;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    background: rgba(0, 0, 0, 0.137);
+    border: 0px solid rgba(255, 255, 255, 0); /* Add a white border */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 0;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+
+.text7 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 20.5%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+.text8 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 32%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+.text9 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 51%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+.text10 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 62.5%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+.text11 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 74%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+.text12 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 85.5%; /* Démarre hors de l'écran en bas */
+    left: 405px; /* Centre horizontalement */
+}
+
+/* Animation de décalage vers la gauche au survol */
+.button2:hover {
+    transform: translateX(10px),scale(1.1), translateY(0);
+}
+
+
+
+
+/* Styles pour le cercle rose */
+.pink-square0 {
+    width: 215px; /* Diamètre du cercle */
+    height: 215px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    background-image: url('Images/Tango.jpg');
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    border: 8px solid rgb(255, 255, 255); /* Add a white border */
+    border-radius: 0%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    bottom: -1%; /* Distance du haut de la page */
+    right: -1%; /* Distance de la gauche de la page */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+/* Styles pour le cercle rose */
+.pink-square1 {
+    width: 215px; /* Diamètre du cercle */
+    height: 215px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    background-image: url('Images/Guesha.jpg');
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    border: 8px solid rgb(255, 255, 255); /* Add a white border */
+    border-radius: 0%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    top: -1%; /* Distance du haut de la page */
+    right: -1%; /* Distance de la gauche de la page */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
 /* Styles pour le cercle bleu */
 .blue-circle2 {
     width: 375px; /* Diamètre du cercle */
@@ -244,37 +417,4 @@ button:hover {
     bottom: 28.25%; /* Distance du haut de la page */
     right: -75px; /* Distance de la gauche de la page */
     z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
-}
-
-/* Styles pour le cercle rose */
-.pink-square0 {
-    width: 215px; /* Diamètre du cercle */
-    height: 215px; /* Diamètre du cercle */
-    background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Tango.jpg');
-    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
-    border: 8px solid rgb(255, 255, 255); /* Add a white border */
-    border-radius: 0%; /* Pour rendre l'élément circulaire */
-    position: absolute;
-    bottom: -1%; /* Distance du haut de la page */
-    right: -1%; /* Distance de la gauche de la page */
-    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
-}
-/* Styles pour le cercle rose */
-.pink-square1 {
-    width: 215px; /* Diamètre du cercle */
-    height: 215px; /* Diamètre du cercle */
-    background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Guesha.jpg');
-    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
-    background-position: center; /* Centrer l'image */
-    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
-    border: 8px solid rgb(255, 255, 255); /* Add a white border */
-    border-radius: 0%; /* Pour rendre l'élément circulaire */
-    position: absolute;
-    top: -1%; /* Distance du haut de la page */
-    right: -1%; /* Distance de la gauche de la page */
-    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
 }
