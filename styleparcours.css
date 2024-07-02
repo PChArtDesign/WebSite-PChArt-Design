@@ -1,0 +1,432 @@
+@font-face {
+    font-family: 'Stay-Wanderer';
+    src:url('Ressources/stay-wanderer-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src:url('Ressources/static/LeagueSpartan-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glaciale Indifference';
+    src:url('Ressources/GlacialIndifference-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jonathan';
+    src:url('Ressources/Jonathan\ Hetegral.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Autres styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+/* Styles pour l'image de fond */
+.background-image {
+    background-image: url('Images/Fond-2.png'); /* Chemin vers votre image */
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    width: 100%;
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Couleur du texte pour contraster avec l'image de fond */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Nécessaire pour positionner le cercle bleu */
+}
+/* Styles pour le cercle bleu */
+.blue-circle {
+    width: 375px; /* Diamètre du cercle */
+    height: 375px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    border: 8px solid rgb(0, 237, 255); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    top: -110px; /* Distance du haut de la page */
+    left: -100px; /* Distance de la gauche de la page */
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+/* Styles pour le cercle rose */
+.pink-circle {
+    width: 325px; /* Diamètre du cercle */
+    height: 325px; /* Diamètre du cercle */
+    background-color: rgb(0, 0, 0); /* Couleur du cercle */
+    border: 8px solid rgb(248, 40, 118); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    position: absolute;
+    top: -80px; /* Distance du haut de la page */
+    left: -75px; /* Distance de la gauche de la page */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+/* Styles pour le texte circulaire */
+.circle-text {
+    position: absolute;
+    top: 210px; /* Distance du haut de la page */
+    left: -72.5px; /* Distance de la gauche de la page */
+    width: 325px;
+    height: 10px;
+    font-size: 2em;
+    /*border: 8px solid rgb(248, 40, 118); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    font-family: 'Stay-Wanderer', sans-serif;
+    z-index: 1; 
+}
+
+.circle-text span {
+    position: absolute;
+    /*transform-origin: 350px 350px;
+    font-size: 40px; /* Ajustez la taille du texte selon vos besoins */
+    color: white; /* Couleur du texte */
+}
+
+.circle-text span:nth-child(1) { transform: rotate(195deg) translate(85px) rotate(-166deg); }/*A*/
+.circle-text span:nth-child(2) { transform: rotate(192deg) translate(70px) rotate(-163deg); }/*r*/
+.circle-text span:nth-child(3) { transform: rotate(189deg) translate(55px) rotate(-160deg); }/*t*/
+.circle-text span:nth-child(4) { transform: rotate(186deg) translate(40px) rotate(-157deg); }/*_*/
+.circle-text span:nth-child(5) { transform: rotate(183deg) translate(25px) rotate(-180deg); }/*s*/
+.circle-text span:nth-child(6) { transform: rotate(180deg) translate(10px) rotate(-180deg); }/*u*/
+.circle-text span:nth-child(7) { transform: rotate(177deg) translate(-5px) rotate(-180deg); }/*r*/
+.circle-text span:nth-child(8) { transform: rotate(174deg) translate(-20px) rotate(-180deg); }/*_*/
+.circle-text span:nth-child(9) { transform: rotate(171deg) translate(-35px) rotate(-180deg); }/*M*/
+.circle-text span:nth-child(10) { transform: rotate(168deg) translate(-57px) rotate(-185deg); }/*e*/
+.circle-text span:nth-child(11) { transform: rotate(165deg) translate(-73px) rotate(-190deg); }/*s*/
+.circle-text span:nth-child(12) { transform: rotate(162deg) translate(-90px) rotate(-195deg); }/*u*/
+.circle-text span:nth-child(13) { transform: rotate(159deg) translate(-110px) rotate(-196deg); }/*r*/
+.circle-text span:nth-child(14) { transform: rotate(156deg) translate(-125px) rotate(-200deg); }/*e*/
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Change background to black */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensure that overflow is hidden for animations */
+}
+
+#image-logo {
+    position: absolute;
+    top: 4.3%; /* Démarre hors de l'écran en bas */
+    left: -1%; /* Centre horizontalement */
+    /*transform: translateX(-50%) rotate(30deg); /* Rotation de 30 degrés et centrage */
+    transform: rotate(-12deg); /* Rotation de 45 degrés */
+    width: 20%; /* Largeur suffisamment grande pour couvrir l'écran */
+    /*transition: top 1s ease; /* Animation de 1 seconde avec effet de transition */
+    z-index: 1; /* Place le contenu derrière les autres éléments */
+}
+
+.boutons0 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 1%; /* Démarre hors de l'écran en bas */
+    left:15%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+
+.boutons1 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 9.5%; /* Démarre hors de l'écran en bas */
+    left: 16%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(0, 237, 255);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+.boutons2 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 18%; /* Démarre hors de l'écran en bas */
+    left: 14.5%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+.boutons3 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2.2em;
+    position: absolute;
+    top: 26.5%; /* Démarre hors de l'écran en bas */
+    left: 11%; /* Centre horizontalement */
+    height: 55px;
+    width: 155px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(248, 40, 118);
+    color: white;
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+button:hover {
+    transform: scale(1.1); /* Agrandit légèrement le bouton */
+}
+
+.text6 {
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 0%; /* Démarre hors de l'écran en bas */
+    left: 500px; /* Centre horizontalement */
+    font-size: 2em;
+    width: 500;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+.text12 button,
+.text11 button,
+.text10 button,
+.text9 button,
+.text8 button,
+.text7 button{
+    font-size: 1.6em;
+    width: 650px;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(255, 255, 255, 0); /* Add a white border */
+    border-radius: 20px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 0;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
+
+.text7 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 295px; /* Démarre hors de l'écran en bas */
+    left: -435px; /* Centre horizontalement */
+}
+
+.text8 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 325px; /* Démarre hors de l'écran en bas */
+    left: -365px; /* Centre horizontalement */
+}
+
+.text9 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 355px; /* Démarre hors de l'écran en bas */
+    left: -513px; /* Centre horizontalement */
+}
+
+.text10 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 385px; /* Démarre hors de l'écran en bas */
+    left: -485px; /* Centre horizontalement */
+}
+
+.text11 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 415px; /* Démarre hors de l'écran en bas */
+    left: -488px; /* Centre horizontalement */
+}
+
+.text12 button{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 445px; /* Démarre hors de l'écran en bas */
+    left: -515px; /* Centre horizontalement */
+}
+
+.circle-indus,
+.circle-etudes,
+.circle-art {
+    width:45px; /* Diamètre du cercle */
+    height: 45px; /* Diamètre du cercle */
+    background-color: rgb(255, 255, 255); /* Couleur du cercle */
+    background-image: url('Images/Picto_Dessin.png');
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    border: 2px solid rgb(255, 255, 255); /* Add a white border */
+    border-radius: 50%; /* Pour rendre l'élément circulaire */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+.circle-art {
+    background-image: url('Images/Picto_Dessin.png');
+    position: absolute;
+    top: 485px; /* Distance du haut de la page */
+    right: 998px; /* Distance de la gauche de la page */
+}
+
+.circle-etudes {
+    background-image: url('Images/Etudes.png');
+    position: absolute;
+    top: 125px; /* Distance du haut de la page */
+    right: 998px; /* Distance de la gauche de la page */
+}
+
+.circle-indus {
+    background-image: url('Images/Engrenages.png');
+    position: absolute;
+    top: 125px; /* Distance du haut de la page */
+    right: 500px; /* Distance de la gauche de la page */
+}
+
+.text17,
+.text15,
+.text14 {
+    /*position: absolute; /* Position relative pour utiliser translateX correctement */
+    /*top: 100px; /* Démarre hors de l'écran en bas */
+    /*right: 812px; /* Centre horizontalement */
+    font-size: 1.6em;
+    /*width: 500;*/
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+.text14{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 100px; /* Démarre hors de l'écran en bas */
+    right: 812px; /* Centre horizontalement */
+}
+
+.text15{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 460px; /* Démarre hors de l'écran en bas */
+    right: 586px; /* Centre horizontalement */
+}
+
+.text17{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 100px; /* Démarre hors de l'écran en bas */
+    right: 64px; /* Centre horizontalement */
+}
+
+.text18,
+.text16,
+.text13 {
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 165px; /* Démarre hors de l'écran en bas */
+    left: 530px; /* Centre horizontalement */
+    font-size: 1.2em;
+    width: 350px;
+    height: 600px;
+    font-family: 'Glaciale Indifference', sans-serif;
+    line-height: 1.1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+.text13{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 165px; /* Démarre hors de l'écran en bas */
+    left: 530px; /* Centre horizontalement */
+}
+
+.text16{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 525px; /* Démarre hors de l'écran en bas */
+    right: 530px; /* Centre horizontalement */
+}
+
+.text18{
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 180px; /* Démarre hors de l'écran en bas */
+    left: 1030px; /* Centre horizontalement */
+}
+
+.separateur {
+    width:1px; /* Diamètre du cercle */
+    height: 590px; /* Diamètre du cercle */
+    background-color: rgb(255, 255, 255); /* Couleur du cercle */
+    background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    border: 1px solid rgb(255, 255, 255); /* Add a white border */
+    border-radius: 0%; /* Pour rendre l'élément circulaire */
+    z-index: 1; /* Pour s'assurer qu'il est derrière le contenu principal */
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 125px; /* Démarre hors de l'écran en bas */
+    left: 970px; /* Centre horizontalement */
+}
+/* Styles pour le conteneur de téléchargement */
+.download-container {
+    width: 35.4%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f961;
+    font-family: 'Glaciale Indifference', sans-serif;
+    text-align: center;
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    bottom: 0px; /* Démarre hors de l'écran en bas */
+    right: 0px; /* Centre horizontalement */
+}
+
+/* Styles pour le lien de téléchargement */
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: 'Glaciale Indifference', sans-serif;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-link:hover {
+    background-color: #0056b3;
+}
