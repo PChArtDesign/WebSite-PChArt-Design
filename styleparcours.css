@@ -430,3 +430,50 @@ button:hover {
 .download-link:hover {
     background-color: #0056b3;
 }
+.social-media {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left:10px;
+    font-family: 'Glaciale Indifference';
+    color: white;
+    align-items: center;
+}
+
+.social-media p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*text-indent: -9999px; /* Masque le texte du lien */
+    filter: invert(100%) sepia(100%) saturate(500%) hue-rotate(200deg);
+}
+
+.social-icon.facebook {
+    background-image: url('Images/facebook.svg');
+}
+
+.social-icon.behance {
+    background-image: url('Images/behance.svg');
+}
+
+.social-icon.instagram {
+    background-image: url('Images/instagram.svg');
+}
+
+.social-icon:hover { 
+    transform: scale(1.1);
+}
