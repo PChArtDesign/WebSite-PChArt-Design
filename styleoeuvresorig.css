@@ -38,7 +38,7 @@ body, html {
 
 /* Styles pour l'image de fond */
 .background-image {
-    background-image: url('Images/Fond-2.png'); /* Chemin vers votre image */
+    background-image: url('Images/Ressources/Fond-2.png'); /* Chemin vers votre image */
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -342,15 +342,15 @@ button:hover {
 }
 
 .social-icon.facebook {
-    background-image: url('Images/facebook.svg');
+    background-image: url('Images/Réseaux/facebook.svg');
 }
 
 .social-icon.behance {
-    background-image: url('Images/behance.svg');
+    background-image: url('Images/Réseaux/behance.svg');
 }
 
 .social-icon.instagram {
-    background-image: url('Images/instagram.svg');
+    background-image: url('Images/Réseaux/instagram.svg');
 }
 
 .social-icon:hover { 
@@ -390,9 +390,13 @@ left:500px;
     display: none;
     flex-direction: column;
     position: relative;
-    left: 150px;
+    left: 130px;
     align-items: right;
     margin-bottom: 10px;
+    max-height: 330px; /* Ajuste la hauteur pour trois vignettes plus marges */
+    overflow-y: auto; /* Ajoute le défilement vertical */
+    direction: rtl; /* Place la barre de défilement à gauche */
+    width: 120px;
 }
 
 .thumbnail {
@@ -401,6 +405,7 @@ left:500px;
     object-fit: cover;
     margin: 5px 0;
     cursor: pointer;
+    direction: ltr; /* Réinverser le contenu à l'intérieur */
 }
 
 .gallery {

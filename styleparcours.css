@@ -38,7 +38,7 @@ body, html {
 
 /* Styles pour l'image de fond */
 .background-image {
-    background-image: url('Images/Fond-2.png'); /* Chemin vers votre image */
+    background-image: url('Images/Ressources/Fond-2.png'); /* Chemin vers votre image */
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -289,7 +289,6 @@ button:hover {
     width:45px; /* Diamètre du cercle */
     height: 45px; /* Diamètre du cercle */
     background-color: rgb(255, 255, 255); /* Couleur du cercle */
-    background-image: url('Images/Picto_Dessin.png');
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -299,21 +298,21 @@ button:hover {
 }
 
 .circle-art {
-    background-image: url('Images/Picto_Dessin.png');
+    background-image: url('Images/Parcours/Picto_Dessin.png');
     position: absolute;
     top: 485px; /* Distance du haut de la page */
     right: 998px; /* Distance de la gauche de la page */
 }
 
 .circle-etudes {
-    background-image: url('Images/Etudes.png');
+    background-image: url('Images/Parcours/Etudes.png');
     position: absolute;
     top: 125px; /* Distance du haut de la page */
     right: 998px; /* Distance de la gauche de la page */
 }
 
 .circle-indus {
-    background-image: url('Images/Engrenages.png');
+    background-image: url('Images/Parcours/Engrenages.png');
     position: absolute;
     top: 125px; /* Distance du haut de la page */
     right: 500px; /* Distance de la gauche de la page */
@@ -463,15 +462,15 @@ button:hover {
 }
 
 .social-icon.facebook {
-    background-image: url('Images/facebook.svg');
+    background-image: url('Images/Réseaux/facebook.svg');
 }
 
 .social-icon.behance {
-    background-image: url('Images/behance.svg');
+    background-image: url('Images/Réseaux/behance.svg');
 }
 
 .social-icon.instagram {
-    background-image: url('Images/instagram.svg');
+    background-image: url('Images/Réseaux/instagram.svg');
 }
 
 .social-icon:hover { 

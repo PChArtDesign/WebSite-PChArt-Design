@@ -38,7 +38,7 @@ body, html {
 
 /* Styles pour l'image de fond */
 .background-image {
-    background-image: url('Images/Fond-2.png'); /* Chemin vers votre image */
+    background-image: url('Images/Ressources/Fond-2.png'); /* Chemin vers votre image */
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -362,7 +362,7 @@ button:hover {
     width: 215px; /* Diamètre du cercle */
     height: 215px; /* Diamètre du cercle */
     background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Tango.jpg');
+    background-image: url('Images/Portfolio/Tango.jpg');
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -378,7 +378,7 @@ button:hover {
     width: 215px; /* Diamètre du cercle */
     height: 215px; /* Diamètre du cercle */
     background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Guesha.jpg');
+    background-image: url('Images/Portfolio/Guesha.jpg');
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -407,7 +407,7 @@ button:hover {
    width: 325px; /* Diamètre du cercle */
     height: 325px; /* Diamètre du cercle */
     background-color: rgb(0, 0, 0); /* Couleur du cercle */
-    background-image: url('Images/Reflet.jpg');
+    background-image: url('Images/Portfolio/Reflet.jpg');
     background-size: cover; /* Pour couvrir toute la zone sans déformer l'image */
     background-position: center; /* Centrer l'image */
     background-repeat: no-repeat; /* Empêcher la répétition de l'image */
@@ -451,15 +451,15 @@ button:hover {
 }
 
 .social-icon.facebook {
-    background-image: url('Images/facebook.svg');
+    background-image: url('Images/Réseaux/facebook.svg');
 }
 
 .social-icon.behance {
-    background-image: url('Images/behance.svg');
+    background-image: url('Images/Réseaux/behance.svg');
 }
 
 .social-icon.instagram {
-    background-image: url('Images/instagram.svg');
+    background-image: url('Images/Réseaux/instagram.svg');
 }
 
 .social-icon:hover { 
