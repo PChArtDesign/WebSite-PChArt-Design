@@ -215,7 +215,7 @@ button:hover {
 .text6 {
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 0%; /* Démarre hors de l'écran en bas */
-    left: 500px; /* Centre horizontalement */
+    left: 625px; /* Centre horizontalement */
     font-size: 2em;
     width: 500;
     font-family: 'League Spartan', sans-serif;
@@ -282,6 +282,33 @@ button:hover {
     top: 445px; /* Démarre hors de l'écran en bas */
     left: -515px; /* Centre horizontalement */
 }
+
+.text13 {
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    top: 13%; /* Démarre hors de l'écran en bas */
+    left: 660px; /* Centre horizontalement */
+    font-size: 0.7em;
+    width: 600px;
+    font-family: 'Glaciale Indifference', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
+.text14 {
+    position: absolute; /* Position relative pour utiliser translateX correctement */
+    bottom: 0; /* Démarre hors de l'écran en bas */
+    left: 500px; /* Centre horizontalement */
+    font-size: 0.6em;
+    width: 1000px;
+    font-family: 'Glaciale Indifference', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    z-index: 0; /* Pour s'assurer qu'il est derrière le contenu principal */
+}
+
 .social-media {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -329,43 +356,95 @@ button:hover {
 .social-icon:hover { 
     transform: scale(1.1);
 }
-/*Partie de la galerie*/
-.gallery {
+
+
+.containerG {
+position: absolute;
+top:25%;
+left:500px;
     display: flex;
-    gap: 10px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 
-.thumbnail img {
+.menu {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+}
+
+.category-btn {
+    padding: 2px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(255, 255, 255, 0); /* Add a white border */
+    border-radius: 20px;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+}
+
+.thumbnails-containerG {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    left: 150px;
+    align-items: right;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
     width: 100px;
     height: 100px;
+    object-fit: cover;
+    margin: 5px 0;
     cursor: pointer;
+}
+
+.gallery {
     display: flex;
     flex-direction: column;
-    border: 2px solid transparent;
+    margin-left: 20px;
+    width: 60%;
 }
 
-.thumbnail img:hover {
-    border: 1Opx solid #ffffff;
+.display-containerG {
+    display: flex;
+    /*flex-direction: column;*/
+    width: 3000px;
+    align-items: center;
 }
 
-.image-display {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    margin-top: 20px;
-    /*display: none;*/
-    text-align: center;
+.polaroid {
+    background: white;
+    width: 400px; /* Fixe la largeur */
+    height: 470px; /* Fixe la hauteur */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Jonathan', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;    
 }
 
-.image-display img {
+#displayed-image {
     max-width: 100%;
-    height: 500px;
+    max-height: 400px;
 }
 
-.image-display p {
-    font-size: 18px;
+.caption {
     margin-top: 10px;
+}
+
+.image-description {
+    background: rgba(255, 255, 255, 0);
+    width: 250px;
+    font-family: 'Glaciale Indifference', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    height: 470px;
 }
