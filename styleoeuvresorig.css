@@ -208,6 +208,25 @@ body, html {
     transition: background 0.3s;
     cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
 }
+
+.boutons4 button {
+    text-decoration: none;
+    font-family: 'Stay-Wanderer', sans-serif;
+    font-size: 2em;
+    position: absolute;
+    bottom: 15px; /* Démarre hors de l'écran en bas */
+    left:700px; /* Centre horizontalement */
+    height: 50px;
+    width: 600px;
+    margin: 0 0em;
+    padding: 0.2em 0.2em;
+    background: rgb(234, 178, 194);
+    color: rgb(118, 38, 124);
+    border: 4px solid white; /* Add a white border */
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer; /* Change le curseur en une main lorsque l'on passe sur un bouton */
+}
 button:hover {
     transform: scale(1.1); /* Agrandit légèrement le bouton */
 }
@@ -272,21 +291,21 @@ button:hover {
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 475px; /* Démarre hors de l'écran en bas */
     /*left: -645px; /* Centre horizontalement */
-    left:-837px;
+    left:-843px;
 }
 
 .text11 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 525px; /* Démarre hors de l'écran en bas */
     /*left: -652px; /* Centre horizontalement */
-    left:-843px;
+    left:-877px;
 }
 
 .text12 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 575px; /* Démarre hors de l'écran en bas */
     /*left: -685px; /* Centre horizontalement */
-    left:-877px;
+    left:-837px;
 }
 
 .text13 {
@@ -304,9 +323,9 @@ button:hover {
 
 .text14 {
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    bottom: 0; /* Démarre hors de l'écran en bas */
+    bottom: 60px; /* Démarre hors de l'écran en bas */
     left: 500px; /* Centre horizontalement */
-    font-size: 0.6em;
+    font-size: 0.7em;
     width: 1000px;
     font-family: 'Glaciale Indifference', sans-serif;
     display: flex;
@@ -429,8 +448,8 @@ button:hover {
 
 .polaroid {
     background: white;
-    width: 400px; /* Fixe la largeur */
-    height: 470px; /* Fixe la hauteur */
+    width: 350px; /* Fixe la largeur */
+    height: 420px; /* Fixe la hauteur */
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -444,10 +463,10 @@ button:hover {
 
 .caption {
     position: relative;
-    bottom: 10px; /* Adjust this value to position the title higher or lower */
+    bottom: 1px; /* Adjust this value to position the title higher or lower */
     font-family: 'Jonathan', sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .image-description {
@@ -456,7 +475,7 @@ button:hover {
     font-family: 'Glaciale Indifference', sans-serif;
     color: rgb(0, 0, 0);
     font-size: 20px;
-    height: 470px;
+    height: 420px;
     text-align: center; 
     margin-left: 15px;
     line-height: 1.5;

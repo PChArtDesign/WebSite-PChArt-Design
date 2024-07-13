@@ -272,21 +272,21 @@ button:hover {
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 475px; /* Démarre hors de l'écran en bas */
     /*left: -645px; /* Centre horizontalement */
-    left:-837px;
+    left:-843px;
 }
 
 .text11 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 525px; /* Démarre hors de l'écran en bas */
     /*left: -652px; /* Centre horizontalement */
-    left:-843px;
+    left:-877px;
 }
 
 .text12 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
     top: 575px; /* Démarre hors de l'écran en bas */
     /*left: -685px; /* Centre horizontalement */
-    left:-877px;
+    left:-837px;
 }
 
 .circle-indus,
