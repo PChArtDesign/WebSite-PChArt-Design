@@ -230,8 +230,8 @@ button:hover {
 .text9 button,
 .text8 button,
 .text7 button{
-    font-size: 1.6em;
-    width: 650px;
+    font-size: 2em;
+    width: 1041px;
     font-family: 'League Spartan', sans-serif;
     color: white;
     background: rgba(0, 0, 0, 0);
@@ -249,38 +249,44 @@ button:hover {
 
 .text7 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 295px; /* Démarre hors de l'écran en bas */
-    left: -435px; /* Centre horizontalement */
+    top: 325px; /* Démarre hors de l'écran en bas */
+    /*left: -585px; /* Centre horizontalement */
+    left:-776px;
 }
 
 .text8 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 325px; /* Démarre hors de l'écran en bas */
-    left: -365px; /* Centre horizontalement */
+    top: 375px; /* Démarre hors de l'écran en bas */
+    /*left: -503px; /* Centre horizontalement */
+    left:-694px;
 }
 
 .text9 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 355px; /* Démarre hors de l'écran en bas */
-    left: -513px; /* Centre horizontalement */
+    top: 425px; /* Démarre hors de l'écran en bas */
+    /*left: -683px; /* Centre horizontalement */
+    left:-873px;
 }
 
 .text10 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 385px; /* Démarre hors de l'écran en bas */
-    left: -485px; /* Centre horizontalement */
+    top: 475px; /* Démarre hors de l'écran en bas */
+    /*left: -645px; /* Centre horizontalement */
+    left:-837px;
 }
 
 .text11 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 415px; /* Démarre hors de l'écran en bas */
-    left: -488px; /* Centre horizontalement */
+    top: 525px; /* Démarre hors de l'écran en bas */
+    /*left: -652px; /* Centre horizontalement */
+    left:-843px;
 }
 
 .text12 button{
     position: absolute; /* Position relative pour utiliser translateX correctement */
-    top: 445px; /* Démarre hors de l'écran en bas */
-    left: -515px; /* Centre horizontalement */
+    top: 575px; /* Démarre hors de l'écran en bas */
+    /*left: -685px; /* Centre horizontalement */
+    left:-877px;
 }
 
 .text13 {
@@ -359,9 +365,9 @@ button:hover {
 
 
 .containerG {
-position: absolute;
-top:25%;
-left:500px;
+    position: absolute;
+    top:25%;
+    left:480px;
     display: flex;
 }
 
@@ -377,7 +383,7 @@ left:500px;
     cursor: pointer;
     font-family: 'League Spartan', sans-serif;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     background: rgba(0, 0, 0, 0);
     border: 0px solid rgba(255, 255, 255, 0); /* Add a white border */
     border-radius: 20px;
@@ -417,7 +423,6 @@ left:500px;
 
 .display-containerG {
     display: flex;
-    /*flex-direction: column;*/
     width: 3000px;
     align-items: center;
 }
@@ -429,11 +434,7 @@ left:500px;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-family: 'Jonathan', sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-align: center;    
+    text-align: center; 
 }
 
 #displayed-image {
@@ -442,14 +443,21 @@ left:500px;
 }
 
 .caption {
-    margin-top: 10px;
+    position: relative;
+    bottom: 10px; /* Adjust this value to position the title higher or lower */
+    font-family: 'Jonathan', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 48px;
 }
 
 .image-description {
     background: rgba(255, 255, 255, 0);
-    width: 250px;
+    width: 275px;
     font-family: 'Glaciale Indifference', sans-serif;
     color: rgb(0, 0, 0);
     font-size: 20px;
     height: 470px;
+    text-align: center; 
+    margin-left: 15px;
+    line-height: 1.5;
 }
