@@ -385,7 +385,7 @@ button:hover {
 
 .containerG {
     position: absolute;
-    top:25%;
+    top:24%;
     left:480px;
     display: flex;
 }
@@ -398,11 +398,11 @@ button:hover {
 
 .category-btn {
     padding: 2px;
-    margin: 5px 0;
+    margin: 4px 0;
     cursor: pointer;
     font-family: 'League Spartan', sans-serif;
     color: white;
-    font-size: 22px;
+    font-size: 21px;
     background: rgba(0, 0, 0, 0);
     border: 0px solid rgba(255, 255, 255, 0); /* Add a white border */
     border-radius: 20px;
