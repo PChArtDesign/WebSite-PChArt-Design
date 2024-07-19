@@ -29,4 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
             imageDescription.innerHTML = description; // Utilisation de innerHTML pour inclure les balises <br>
         });
     });
+    
 });
