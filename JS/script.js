@@ -92,3 +92,27 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(showNextImage, 3000); // Change l'image toutes les 3 secondes
 
 });
+
+document.getElementById('reason').addEventListener('change', function () {
+    var supportFields = document.getElementById('supportFields');
+    var salesFields = document.getElementById('salesFields');
+    var feedbackFields = document.getElementById('feedbackFields');
+    
+    // Masquer tous les champs dynamiques
+    supportFields.classList.add('hidden');
+    salesFields.classList.add('hidden');
+    feedbackFields.classList.add('hidden');
+    
+    // Afficher les champs pertinents en fonction de la sélection
+    switch (this.value) {
+        case 'support':
+            supportFields.classList.remove('hidden');
+            break;
+        case 'sales':
+            salesFields.classList.remove('hidden');
+            break;
+        case 'feedback':
+            feedbackFields.classList.remove('hidden');
+            break;
+    }
+            });
